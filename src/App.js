@@ -18,10 +18,18 @@ function App() {
 
   return (
     <div className="App">
-      <header>{`Amount - ${account}`}</header>
-      <input placeHolder={0} onChange={handleAmountChange} />
-      <button onClick={() => depositMoney(amount)}>Deposit</button>
-      <button onClick={() => withdrawMoney(amount)}>Withdraw</button>
+      <header style={{ margin: 10 }}>{`Amount - ${account}`}</header>
+      <input
+        placeHolder={0}
+        onChange={handleAmountChange}
+        style={{ margin: 10 }}
+      />
+      <button onClick={() => depositMoney(amount)} style={{ margin: 10 }}>
+        Deposit
+      </button>
+      <button onClick={() => withdrawMoney(amount)} style={{ margin: 10 }}>
+        Withdraw
+      </button>
     </div>
   );
 }
