@@ -1,4 +1,4 @@
-const reducer = (state = 0, action) => {
+export const accountReducer = (state = 0, action) => {
   switch (action.type.toLowerCase()) {
     case "deposit":
       return state + action.payload;
@@ -12,4 +12,11 @@ const reducer = (state = 0, action) => {
   }
 };
 
-export default reducer;
+export const amountReducer = (state = 0, action) => {
+  switch (action.type.toLowerCase()) {
+    case "update-balance":
+      return action.payload;
+    default:
+      return state;
+  }
+};
