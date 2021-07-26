@@ -1,4 +1,6 @@
-export const accountReducer = (state = 0, action) => {
+import { combineReducers } from "redux";
+
+const accountReducer = (state = 0, action) => {
   switch (action.type.toLowerCase()) {
     case "deposit":
       return state + action.payload;
@@ -12,7 +14,7 @@ export const accountReducer = (state = 0, action) => {
   }
 };
 
-export const amountReducer = (state = 0, action) => {
+const amountReducer = (state = 0, action) => {
   switch (action.type.toLowerCase()) {
     case "update-balance":
       return action.payload;
@@ -20,3 +22,10 @@ export const amountReducer = (state = 0, action) => {
       return state;
   }
 };
+
+const reducers = combineReducers({
+  account: accountReducer,
+  amount: amountReducer,
+});
+
+export default reducers;

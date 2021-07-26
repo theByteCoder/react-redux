@@ -10,7 +10,7 @@ const Deposit = () => {
   return (
     <div className="App">
       <button onClick={() => depositMoney(amount)} style={{ margin: 10 }}>
-        Withdraw
+        Deposit
       </button>
     </div>
   );
